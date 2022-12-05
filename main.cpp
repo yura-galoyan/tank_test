@@ -109,18 +109,18 @@ int main(){
             if(key == 's'){
                 tank.moveDown();
             }
-
-
+            //start bullet
             if(key == 'k'){
                 shoot = true;
                 b.setx(3);
                 b.sety(tank.gety());
             }
-
+            // if bullet shooting is started
             if(shoot){
                 b.shoot();
+                //check if it touched wall
                 if(!b.colision()) {
-                    shoot = false;
+                    shoot = false; // end bullet
                     b.erase();}
             }
 
